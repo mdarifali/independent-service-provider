@@ -15,7 +15,7 @@ const SocialLogin = () => {
     const [signInWithGithub, user1, loading1, error1] = useSignInWithGithub(auth);
     const navigate = useNavigate ();
 
-    if (error || error1) {
+    if (error) {
         return (
             <div>
                 <p className='text-danger'>Error: {error?.message} {error1?.message}</p>

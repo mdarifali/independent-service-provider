@@ -1,26 +1,46 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './Login.css';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import SocialLogin from './SocialLogin/SocialLogin';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { auth } from '../../FirebaseAuth';
 
 const Login = () => {
-    const [email, setEmail] = useState ('');
-    const [password, setPassword] = useState ('');
-    const [error, setError] = useState ();
+
+    const [userInfo, setUserInfo] = useState ({
+        email:'',
+        password:''
+    });
+
+    const [errors, setErrors] = useState ({
+        email:'',
+        password:""
+    });
 
     const [ signInWithEmailAndPassword, user, loading, hookerror] = useSignInWithEmailAndPassword (auth);
+    const navigate = useNavigate();
+    const location = useLocation();
+    const form = location.state?.pathname || '/';
+
+    useEffect(() => {
+
+        if (user) {
+            navigate(form);
+        }
+        
+    }, [user])
 
     const handelEmailChange = (e) => {
         const emailRegex = /\S+@\S+\.\S+/;
         const validEmail = emailRegex.test(e.target.value);
 
         if (validEmail){
-            setEmail(e.target.value);
+            setUserInfo({ ...userInfo, email: e.target.value});
+            setErrors({...errors, email: '' })
         }
         else{
-            setError('Please Enter Valid Email!');
+            setErrors({...errors, email: 'Please Enter Valid Email!'});
+            setUserInfo({ ...userInfo, email: '' });
         }
     };
 
@@ -29,16 +49,18 @@ const Login = () => {
         const validPassword = passwordRegex.test(e.target.value);
         
         if (validPassword) {
-            setEmail(e.target.value);
+            setUserInfo({ ...userInfo, password: e.target.value });
+            setErrors({ ...errors, password: '' });
         }
         else {
-            setError('Please Enter Valid Password!');
+            setErrors({ ...errors, password: 'Min 8 characters, at least 1 letter, 1 number and 1 special character!'});
+            setUserInfo({ ...userInfo, password: '' });
         }
     };
 
     const handleLogin = (e) => {
         e.preventDefault();
-        signInWithEmailAndPassword(email, password);
+        signInWithEmailAndPassword(userInfo.email, userInfo.password);
     };
 
     return (
@@ -53,17 +75,19 @@ const Login = () => {
                                     <p className="text-dark-50 mb-5">Please enter your login and password!</p>
 
                                     <div className="form-outline form-dark mb-4">
-                                        <input type="email" id="typeEmailX" className="form-control form-control-lg" placeholder='Email' onChange={handelEmailChange} required/>
+                                        <input type="email" className="form-control form-control-lg" placeholder='Email' onChange={handelEmailChange} required/>
+                                        {errors?.email && <p className='text-danger text-start my-2'>{errors.email}</p>}
                                     </div>
 
                                     <div className="form-outline form-dark mb-4">
-                                        <input type="password" id="typePasswordX" className="form-control form-control-lg" placeholder='Password' onChange={handelPasswordChange} required/>
+                                        <input type="password" className="form-control form-control-lg" placeholder='Password' onChange={handelPasswordChange} />
+                                        {errors?.password && <p className='text-danger text-start my-2'>{errors.password}</p>}
                                     </div>
 
                                     <p className="small mb-3 pb-lg-2"><a className="text-danger" href="#!">Forgot password?</a></p>
 
                                     <button className="btn btn-outline-success btn-lg px-5" type="submit">Login</button>
-                                    {error && <p className='text-danger text-center my-4'>{error}</p>}
+                                    {/* {hookerror && <p className='text-danger text-center my-4'>{hookerror}</p>} */}
                                 </form>
                                 <SocialLogin />
                                 <div className='pt-3'>
