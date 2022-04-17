@@ -12,8 +12,8 @@ const Header = () => {
                 <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div className="navbar-nav ms-auto">
                         <Link className='nav-link active' to='/home'>HOME</Link>
-                        <Link className='nav-link' to='/booking'>BOOK ONLINE</Link>
                         <Link className='nav-link' to='/services'>SERVICES</Link>
+                        <Link className='nav-link' to='/bookingcart'>BOOKING CART</Link>
                         <Link className='nav-link' to='/login'>LOGIN</Link>
                         <Link className='nav-link' to='/singup'>SING UP</Link>
                         <Link className='nav-link' to='/about'>ABOUT ME</Link>

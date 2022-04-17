@@ -7,6 +7,8 @@ import SingUp from './Componants/SingUp/SingUp';
 import Footer from './Componants/Footer/Footer';
 import Booking from './Componants/Booking/Booking';
 import AboutMe from './Componants/About/AboutMe';
+import RequireAuth from './Componants/Auth/RequireAuth/RequireAuth';
+
 
 function App() {
   return (
@@ -15,7 +17,11 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/home' element={<Home />} />
-        <Route path='/booking' element={<Booking />} />
+        <Route path='/bookingcart' element={
+          <RequireAuth>
+            <Booking />
+          </RequireAuth>
+        } />
         <Route path='/login' element={<Login />} />
         <Route path='/singup' element={<SingUp />} />
         <Route path='/about' element={<AboutMe />} />
