@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "name": "Vinyasa yoga",
+        "img": "https://images.unsplash.com/photo-1593810450967-f9c42742e326?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Njd8fHlvZ2F8ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60",
+        "price": 150,
+        "duration": "2 Week online class",
+        "description": "Trainerize might be known as a tool for fitness coaching, but we don't stop there. We offer a 360º approach to coaching: fitness, nutrition, and habits."
+    },
+    {
+        "id": 2,
+        "name": "Hatha yoga",
+        "img": "https://images.unsplash.com/flagged/photo-1573556278922-ad9a1914c801?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NzB8fHlvZ2F8ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60",
+        "price": 160,
+        "duration": "3 week online class",
+        "description": "Trainerize might be known as a tool for fitness coaching, but we don't stop there. We offer a 360º approach to coaching: fitness, nutrition, and habits." 
+    },
+    {
+        "id": 3,
+        "name": "Iyengar yoga",
+        "img": "https://images.unsplash.com/photo-1518611012118-696072aa579a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjh8fHlvZ2F8ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60",
+        "price": 180,
+        "duration": "4 Week online class",
+        "description": "Trainerize might be known as a tool for fitness coaching, but we don't stop there. We offer a 360º approach to coaching: fitness, nutrition, and habits." 
+    },
+    {
+        "id": 4,
+        "name": "Kundalini yoga",
+        "img": "https://images.unsplash.com/photo-1510894347713-fc3ed6fdf539?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjd8fHlvZ2F8ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60",
+        "price": 190,
+        "duration":"5 Week 5 day online class",
+        "description": "Trainerize might be known as a tool for fitness coaching, but we don't stop there. We offer a 360º approach to coaching: fitness, nutrition, and habits." 
+    },
+    {
+        "id": 5,
+        "name": "Ashtanga yoga",
+        "img": "https://images.unsplash.com/photo-1575052814086-f385e2e2ad1b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8eW9nYXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60",
+        "price": 200,
+        "duration": "6 Week  online class",
+        "description": "Trainerize might be known as a tool for fitness coaching, but we don't stop there. We offer a 360º approach to coaching: fitness, nutrition, and habits." 
+    },
+    {
+        "id": 6,
+        "name": "Bikram yoga",
+        "img": "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8eW9nYXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60",
+        "price": 250,
+        "duration": "7 Week online class",
+        "description": "Trainerize might be known as a tool for fitness coaching, but we don't stop there. We offer a 360º approach to coaching: fitness, nutrition, and habits."
+    }
+]

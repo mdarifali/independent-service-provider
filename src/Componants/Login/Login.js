@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './Login.css';
+import { FiLogIn } from 'react-icons/fi';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import SocialLogin from './SocialLogin/SocialLogin';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
@@ -86,7 +87,9 @@ const Login = () => {
 
                                     <p className="small mb-3 pb-lg-2"><a className="text-danger" href="#!">Forgot password?</a></p>
 
-                                    <button className="btn btn-outline-success btn-lg px-5" type="submit">Login</button>
+                                    <div className="d-grid">
+                                        <button className="btn btn-success p-2" type="submit"><FiLogIn className='fs-5'/> Login</button>
+                                    </div>
                                     {/* {hookerror && <p className='text-danger text-center my-4'>{hookerror}</p>} */}
                                 </form>
                                 <SocialLogin />

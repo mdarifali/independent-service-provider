@@ -1,9 +1,9 @@
 import React from 'react';
 import './SocialLogin.css'
-import { FiFacebook } from 'react-icons/fi';
+import { FaFacebookSquare } from 'react-icons/fa';
 import { AiOutlineGoogle } from 'react-icons/ai';
 import { AiOutlineGithub } from 'react-icons/ai';
-import { useSignInWithGithub, useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import auth from '../../../FirebaseAuth';
 import { useNavigate } from 'react-router-dom';
 
@@ -12,36 +12,36 @@ import { useNavigate } from 'react-router-dom';
 const SocialLogin = () => {
 
     const [signInWithGoogle, user, loading, error] = useSignInWithGoogle (auth);
-    const [signInWithGithub, user1, loading1, error1] = useSignInWithGithub(auth);
     const navigate = useNavigate ();
+    let errorElement;
 
     if (error) {
-        return (
+        errorElement= (
             <div>
-                <p className='text-danger'>Error: {error?.message} {error1?.message}</p>
+                <p className='text-danger'>Error: {error?.message}</p>
             </div>
         );
     }
 
-    if (loading || loading1) {
+    if (loading) {
         return <p>Loading...</p>;
     }
 
-    if (user || user1) {
+    if (user) {
         return navigate('/home');
     }
 
     return (
-        <div className="d-flex justify-content-center text-center mt-4 pt-1">
-            <button
-                onClick={() => signInWithGoogle()}
-                className=" btn text-dark"><AiOutlineGoogle className='fs-4 mx-2' />
-            </button>
-            <button
-                onClick={() => signInWithGithub()}
-                className="btn"><AiOutlineGithub className='text-dark fs-4' />
-            </button>
-            <button className="btn text-dark"><FiFacebook className='fs-4' /></button>
+        <div className='mt-2'>
+            {errorElement}
+            <div className="d-grid gap-2">
+                <button
+                    onClick={() => signInWithGoogle()}
+                    className=" btn btn-danger"><AiOutlineGoogle className='fs-4 mx-2' />
+                </button>
+                <button className="btn btn-dark"><AiOutlineGithub className='fs-4' /></button>
+                <button className="btn btn-primary"><FaFacebookSquare className='fs-4' /></button>
+            </div>
         </div>
     );
 };
