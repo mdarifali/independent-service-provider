@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { FiLogIn } from 'react-icons/fi';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import SocialLogin from '../SocialLogin/SocialLogin';
 import { auth } from '../../FirebaseAuth';
+import GoogleAuth from '../SocialLogin/GoogleAuth';
 
 const SingUp = () => {
 
@@ -116,7 +116,7 @@ const SingUp = () => {
                                         <button className="btn btn-success p-2" type="submit"><FiLogIn className='fs-5' /> Sing Up</button>
                                     </div>
                                 </form>
-                                <SocialLogin />
+                                <GoogleAuth />
                                 <div className='nav-item fw-bold mb-0'>
                                     <Link className="nav-link" to='/login'><span className='text-dark'>Already have an account?</span><span className='text-danger'> Login Hear</span></Link>
                                 </div>

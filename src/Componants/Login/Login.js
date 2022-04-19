@@ -2,9 +2,9 @@ import React, { useEffect, useState } from 'react';
 import './Login.css';
 import { FiLogIn } from 'react-icons/fi';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import SocialLogin from '../SocialLogin/SocialLogin';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { auth } from '../../FirebaseAuth';
+import GoogleAuth from '../SocialLogin/GoogleAuth';
 
 const Login = () => {
 
@@ -92,7 +92,7 @@ const Login = () => {
                                     </div>
                                     {/* {hookerror && <p className='text-danger text-center my-4'>{hookerror}</p>} */}
                                 </form>
-                                <SocialLogin />
+                                <GoogleAuth />
                                 <div className='pt-3'>
                                     <Link className="nav-link text-dark-50 fw-bold mb-0" to='/singup'>Don't have an account? Sign Up</Link>
                                 </div>
