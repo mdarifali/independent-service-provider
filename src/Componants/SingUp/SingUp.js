@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { FiLogIn } from 'react-icons/fi';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import SocialLogin from '../Login/SocialLogin/SocialLogin';
+import SocialLogin from '../SocialLogin/SocialLogin';
 import { auth } from '../../FirebaseAuth';
 
 const SingUp = () => {

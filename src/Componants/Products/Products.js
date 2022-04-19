@@ -1,4 +1,5 @@
 import React from 'react';
+import './Product.css';
 
 const Products = ({ product, handleBooking}) => {
     const { name, img, price, description, duration} = product;
@@ -14,7 +15,7 @@ const Products = ({ product, handleBooking}) => {
                     <h4 className="card-text">Duration: {duration}</h4>
                     <h5 className="card-text">Price: ${price}</h5>
                     <p className="card-text">{description}</p>
-                    <button onClick={() => handleBooking(product)} className="btn btn-primary">BOOK NOW</button>
+                    <button onClick={() => handleBooking(product)} className="btn" id='btn-bg'>BOOK NOW</button>
                 </div>
             </div>
         </div>

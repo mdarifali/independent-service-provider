@@ -8,6 +8,7 @@ import Footer from './Componants/Footer/Footer';
 import Booking from './Componants/Booking/Booking';
 import AboutMe from './Componants/About/AboutMe';
 import RequireAuth from './Componants/Auth/RequireAuth/RequireAuth';
+import Blogs from './Componants/Blogs/Blogs';
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
         <Route path='/login' element={<Login />} />
         <Route path='/singup' element={<SingUp />} />
         <Route path='/about' element={<AboutMe />} />
+        <Route path='/blogs' element={<Blogs />}/>
       </Routes>
       <Footer />
     </div>
