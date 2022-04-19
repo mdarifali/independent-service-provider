@@ -24,6 +24,7 @@ const Header = () => {
                     <div className="navbar-nav ms-auto">
                         <Link className='nav-link active' to='/home'>HOME</Link>
                         <Link className='nav-link' to='/bookingcart'>BOOKING CART</Link>
+                        <Link className='nav-link' to='/blogs'>BLOGS</Link>
                         <Link className='nav-link' to='/about'>ABOUT ME</Link>
                             {
                             user ? (<button className='btn btn-outline-warning' onClick={() => signOut(auth)}>Sing Out</button>) : (<Link className='nav-link text-dark fw-bold' to='/login'>LOGIN <IoIosContact className='text-dark fs-2 pb-1'/></Link>)
