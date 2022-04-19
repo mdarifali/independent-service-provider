@@ -1,0 +1,11 @@
+#home-btn{
+    position: absolute;
+    top: 45%;
+    right: 40%;
+    border-radius: 18px;
+    
+
+}
+#home-btn a{
+    text-decoration: none;
+}

@@ -9,6 +9,7 @@ import Booking from './Componants/Booking/Booking';
 import AboutMe from './Componants/About/AboutMe';
 import RequireAuth from './Componants/Auth/RequireAuth/RequireAuth';
 import Blogs from './Componants/Blogs/Blogs';
+import PageNotFound from './Componants/PageNotFound/PageNotFound';
 
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
         <Route path='/singup' element={<SingUp />} />
         <Route path='/about' element={<AboutMe />} />
         <Route path='/blogs' element={<Blogs />}/>
+        <Route path='*' element={<PageNotFound />} />
       </Routes>
       <Footer />
     </div>
