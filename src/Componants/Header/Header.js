@@ -12,7 +12,7 @@ const Header = () => {
     const [user] = useAuthState(auth)
 
     return (
-        <nav className="navbar navbar-expand-lg navbar-dark" id='nav-bg'>
+        <nav className="navbar navbar-expand-lg navbar-dark sti" id='nav-bg'>
             <div className="container">
                 <a className="navbar-brand" href="/">
                     <img src={Logo} alt="" />
