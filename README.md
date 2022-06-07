@@ -4,10 +4,8 @@ Live Site: https://online-fitness-trainer.web.app
 
 -----------This prject description-------------
 
-*React Js
-*Bootstarp 5 use for CSS
-*React Route use for with page reload
-*React Hook use
-*Google Firebase Auth use
-*Email & Password, Google Account Login
-*Image use free resources website
+- Project Summary: This Project is responsive personal service provider website that works frontend.
+- Client features: This website is used for personal online fitness trainer booking. The client 
+describes his service details and price for who booking by the website. A user can register the user's 
+email and password, then the user booking any package.
+- Technology Used: React, React Router, Bootstrap CSS & Firebase.
